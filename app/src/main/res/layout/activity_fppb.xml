@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/colayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FPPB">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="dappz.depocarev2_ui.FPPB"
+            android:id="@+id/linearlayout">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:titleTextColor="@android:color/black"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Create a Marquee (Scrolling Text) in Android Using TextView. Android Marquee (Scrolling Text) Tutorial with Example"
+                            android:textSize="22sp"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:id="@+id/textTitleMarque"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <ScrollView
+                android:id="@+id/mScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="serif"
+                            android:textStyle="bold"
+                            android:gravity="center|top"
+                            android:text="FORMULIR PERMINTAAN PENGIRIMAN BARANG"/>
+
+                        <TextView
+                            android:id="@+id/tvfppblokasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tvnm"
+                                android:fontFamily="serif"
+                                android:text="@string/tvnm"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+
+
+                            <EditText
+                                android:inputType="number"
+                                android:textIsSelectable="true"
+                                android:hint="Kosongi jika anda bukan member"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:id="@+id/etnomemb"
+                                android:fontFamily="serif"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="@string/tvn"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etnama"
+                                android:fontFamily="serif"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llprov"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvprov"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <AutoCompleteTextView
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:id="@+id/act_prov"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/llprovr"
+                            android:background="@android:color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvprov"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <Spinner
+                                android:background="@color/cardview_dark_background"
+                                style="@style/holoSpinner"
+                                android:id="@+id/sp_prov"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llpro"
+                            android:background="@android:color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvprov"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:focusableInTouchMode="false"
+                                android:id="@+id/spinner1"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:hint="Pilih Provinsi"
+                                android:layout_width="0dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/llkot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvkota"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <AutoCompleteTextView
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:id="@+id/act_kota"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llko"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvkota"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                                android:id="@+id/spinner2"
+                                android:focusableInTouchMode="false"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:hint="Pilih Kabupaten"
+                                android:layout_width="0dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/llkec"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvkec"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <AutoCompleteTextView
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:id="@+id/act_kecamatan"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llkecamatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvkec"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                                android:id="@+id/spinner3"
+                                android:focusableInTouchMode="false"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:hint="Pilih Kecamatan"
+                                android:layout_width="0dp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/llkel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvkel"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <AutoCompleteTextView
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:fontFamily="serif"
+                                android:id="@+id/act_kelurahan"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llkelurahan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="serif"
+                                android:text="@string/tvkel"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                                android:id="@+id/spin4"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:hint="Pilih Kelurahan"
+                                android:layout_width="0dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="@string/tval"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etalamat"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="@string/tvrtrw"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etrt"
+                                android:inputType="number"
+                                android:hint="RT"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content" />
+
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etrW"
+                                android:hint="RW"
+                                android:inputType="number"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="@string/tvhp"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:inputType="phone"
+                                android:id="@+id/ethandphone"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="Telepone"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:inputType="phone"
+                                android:id="@+id/ettelepon"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="Nama Penerima"
+                                android:gravity="center_vertical"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="match_parent" />
+
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etpenerima"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="Permintaan dikirim"
+                                android:gravity="center_vertical"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="match_parent" />
+
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/ettgldikirim"
+                                android:focusable="false"
+                                android:hint="Tanggal"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+
+                            <!--<EditText-->
+                                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"-->
+                                <!--android:id="@+id/etjamdikirim"-->
+                                <!--android:hint="Jam"-->
+                                <!--android:focusable="false"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:fontFamily="serif"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_height="wrap_content" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvjkend"
+                                    android:fontFamily="serif"
+                                    android:text="@string/tvjekend"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <CheckBox
+                                    android:onClick="onCheckboxClicked"
+                                    android:id="@+id/cbpickup"
+                                    android:layout_width="match_parent"
+                                    android:text="Pick-Up"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+                                <CheckBox
+                                    android:id="@+id/cbtruck"
+                                    android:onClick="onCheckboxClicked"
+                                    android:layout_width="match_parent"
+                                    android:text="Truck / Engkel"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+
+
+                                <CheckBox
+                                    android:onClick="onCheckboxClicked"
+                                    android:id="@+id/cbbandobel"
+                                    android:layout_width="match_parent"
+                                    android:text="Truck Engkel Ban Dobel"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+                                <CheckBox
+                                    android:onClick="onCheckboxClicked"
+                                    android:id="@+id/cbtronton"
+                                    android:layout_width="match_parent"
+                                    android:text="Tronton"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:fontFamily="serif"
+                                    android:text="@string/tvp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <CheckBox
+                                    android:id="@+id/cbada"
+                                    android:onClick="onCheckboxClicked"
+                                    android:layout_width="match_parent"
+                                    android:text="Ada (FREE)"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+                                <CheckBox
+                                    android:id="@+id/cbadab"
+                                    android:onClick="onCheckboxClicked"
+                                    android:layout_width="match_parent"
+                                    android:text="Ada (Bayar)"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+
+                                <CheckBox
+                                    android:id="@+id/cbtdkada"
+                                    android:onClick="onCheckboxClicked"
+                                    android:layout_width="match_parent"
+                                    android:text="Tidak Ada"
+                                    android:layout_height="wrap_content"
+                                    tools:ignore="OnClick" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--<TextView-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/tvket"/>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/lllokasi"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <Button
+                            android:id="@+id/btcarilok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/calok"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/llplace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="Lokasi"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etlokasi"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <Button
+                                android:id="@+id/reset"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="Reset"
+                                android:textColor="#ffff"
+                                android:backgroundTint="@color/red"
+                                android:layout_weight="1"/>
+                            <Button
+                                android:id="@+id/okkirim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="SIMPAN"
+                                android:backgroundTint="@color/kuning"
+                                android:layout_weight="1"/>
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <fragment
+                                android:layout_width="match_parent"
+                                android:layout_height="360dp"
+                                android:id="@+id/map"
+                                android:layout_margin="5dp"
+                                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+                            <ImageView
+                                android:id="@+id/transparent_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="360dp"
+                                android:src="@android:color/transparent" />
+
+                        </FrameLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et"
+                            android:background="@android:color/transparent"/>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="Latitude"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etlatitude"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:fontFamily="serif"
+                                android:text="Longitude"
+                                android:textColor="@android:color/black"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.2"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                android:id="@+id/etlongitude"
+                                android:layout_width="0dp"
+                                android:fontFamily="serif"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llnotemp"
+            android:visibility="gone"
+            android:background="@color/kuning1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/tvnotemp"/>
+
+            <TextView
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@android:color/black"
+                android:text="Sebutkan nomor ini di Customer Service kami"/>
+
+            <Button
+                android:text="OK"
+                android:id="@+id/btnotemp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

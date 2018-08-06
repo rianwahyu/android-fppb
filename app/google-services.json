@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "657927136059",
+    "project_id": "fppbsidoarjo-1509530203628"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657927136059:android:803e06ebfcbdcb80",
+        "android_client_info": {
+          "package_name": "id.co.megadepo.fppb_sidoarjo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657927136059-e2qm4j3njomkhfifse0t0mpmm5ral97n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPit3PGUM-4jv0GeVR05A0KS_20aEn748"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

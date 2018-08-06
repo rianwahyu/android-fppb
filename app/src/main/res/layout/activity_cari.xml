@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Riwayat_FPPB.riwayatfppb">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarCari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarCari"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:titleTextColor="@android:color/black"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+   <!-- <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe">
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchHP"
+                android:iconifiedByDefault="false"
+                app:queryHint="Input Nomor Hp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_empty"
+                android:gravity="right"
+                android:inputType="number">
+
+            </android.support.v7.widget.SearchView>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/listCari"
+                ></ListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="not found"
+                android:id="@+id/textnotfound"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <!--<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/linear1">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/textHp"
+                android:hint="Masukkan Nomor Hp"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/btnCari"
+                android:text="Cari"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:id="@+id/listCari"></ListView>
+
+
+    </RelativeLayout>-->
+
+</LinearLayout>

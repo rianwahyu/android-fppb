@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item android:id="@+id/riwa"
+            android:title="@string/riwayat"
+            />
+
+   <!--     <item android:id="@+id/hps"
+            android:title="Bersihkan Form"
+            />
+-->
+        <item android:id="@+id/cari"
+            android:title="Cari Riwayat Online"/>
+
+</menu>

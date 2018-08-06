@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FPPB</string>
+    <string name="riwayat">Riwayat Permintaan Kirim</string>
+    <string name="tvnm">No. Member</string>
+    <string name="tvn">Nama <font color='red'>*</font></string>
+    <string name="tval">Alamat <font color='red'>*</font></string>
+    <string name="tvkel">Kelurahan <font color='red'>*</font></string>
+    <string name="tvkec">Kecamatan <font color='red'>*</font></string>
+    <string name="tvkota">Kota / Kab. <font color='red'>*</font></string>
+    <string name="tvprov">Provinsi <font color='red'>*</font></string>
+    <string name="tvhp">Handphone <font color='red'>*</font></string>
+    <string name="tvjekend">Jenis Kendaraan <font color='red'>*</font></string>
+    <string name="tvp">Portal <font color='red'>*</font></string>
+    <string name="calok">Cari Detail Lokasi Pengiriman <b>(opsional)</b></string>
+    <string name="tvrtrw">RT / RW</string>
+
+    <string name="search">Search</string>
+    <string name="type_name">Input No Hp</string>
+</resources>
